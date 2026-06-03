@@ -25,31 +25,31 @@ def classificacao_imc (imc:float) -> str:
         
 def program ():
     
-while True:
-    
-    nome=input(str("\nOlá, eu sou a tua App dos Saltos! Como te chamas? "))
-    peso=float(input(f"\n {nome}, diz-me o teu peso: "))
-    altura=int(input("\n Obrigado! E agora a tua altura, em centímetros: "))
-
-    imc = calculo_imc(peso, altura)
-    
-    escolha = input(int(f"\n Bem, {nome}, com os dados fornecidos fui capaz de calcular o teu IMC, queres saber? (s/n): ")).lower()
-    
-    if escolha not in ["s", "sim"]:
-        print("\n OK!"),
-           
-        escolha = input("\n Vamos começar a trabalhar! (s/n ) ").lower()   
-        if escolha not in ["s", "sim"]:
-            break
-    
-    if escolha in ["s", "sim"]:
-        escolha = input(f"\n {nome}, o teu IMC é de {classificacao_imc(imc)}. \n Vamos melhorar esse valor? (s/n) ").lower()
-            
-        if escolha not in ["s", "sim"]:
-            break
-    
-    
+    while True:
         
+        nome=input(str("\nOlá, eu sou a tua App dos Saltos! Como te chamas? "))
+        peso=float(input(f"\n {nome}, diz-me o teu peso: "))
+        altura=int(input("\n Obrigado! E agora a tua altura, em centímetros: "))
+
+        imc = calculo_imc(peso, altura)
+        
+        escolha = input(int(f"\n Bem, {nome}, com os dados fornecidos fui capaz de calcular o teu IMC, queres saber? (s/n): ")).lower()
+        
+        if escolha not in ["s", "sim"]:
+            print("\n OK!"),
+            
+            escolha = input("\n Vamos começar a trabalhar! (s/n ) ").lower()   
+            if escolha not in ["s", "sim"]:
+                break
+        
+        if escolha in ["s", "sim"]:
+            escolha = input(f"\n {nome}, o teu IMC é de {classificacao_imc(imc)}. \n Vamos melhorar esse valor? (s/n) ").lower()
+                
+            if escolha not in ["s", "sim"]:
+                break
+        
+        
+            
         
     
     
