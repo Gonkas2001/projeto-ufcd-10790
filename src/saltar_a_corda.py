@@ -25,6 +25,27 @@ def classificacao_imc (imc:float) -> str:
         elif imc >= 30:
             return("\n Apresentas obesidade. Vamos trabalhar!")
         
+        
+def calcular_calorias(saltos: int) -> float:
+    return saltos * CALORIAS_POR_SALTO
+
+
+def criar_sessao() -> dict:
+
+    saltos = int(input("\nNúmero de saltos realizados: "))
+    duracao = int(input("Duração da sessão (minutos): "))
+
+    calorias = calcular_calorias(saltos)
+
+    sessao = {
+        "data": str(date.today()),
+        "saltos": saltos,
+        "duracao": duracao,
+        "calorias": calorias
+    }
+
+    return sessao       
+
 def program ():
     
     while True:
@@ -49,27 +70,7 @@ def program ():
                 
             if escolha not in ["s", "sim"]:
                 break
-        
-def calcular_calorias(saltos: int) -> float:
-    return saltos * CALORIAS_POR_SALTO
-
-
-def criar_sessao() -> dict:
-
-    saltos = int(input("\nNúmero de saltos realizados: "))
-    duracao = int(input("Duração da sessão (minutos): "))
-
-    calorias = calcular_calorias(saltos)
-
-    sessao = {
-        "data": str(date.today()),
-        "saltos": saltos,
-        "duracao": duracao,
-        "calorias": calorias
-    }
-
-    return sessao       
-            
+                    
         
     
     
