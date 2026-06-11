@@ -91,7 +91,44 @@ def program ():
                 
             if escolha not in ["s", "sim"]:
                 break
-                    
+    
+    while True:
+
+        print("\n===== MENU =====")
+        print("1 - Registar sessão")
+        print("2 - Ver estatísticas")
+        print("3 - Sair")
+
+        opcao = input("\nEscolha uma opção: ")
+
+        if opcao == "1":
+
+            sessao = criar_sessao()
+
+            sessoes.append(sessao)
+
+            print("\nSessão registada com sucesso!")
+
+            print(f"Data: {sessao['data']}")
+            print(f"Saltos: {sessao['saltos']}")
+            print(f"Duração: {sessao['duracao']} minutos")
+            print(f"Calorias: {sessao['calorias']:.2f} kcal")
+
+        elif opcao == "2":
+
+            mostrar_estatisticas(sessoes)
+
+        elif opcao == "3":
+
+            print("\nObrigado por utilizares a App dos Saltos!")
+            break
+
+        else:
+            print("\nOpção inválida.")
+
+
+if __name__ == "__main__":
+    main()                
         
     
     
