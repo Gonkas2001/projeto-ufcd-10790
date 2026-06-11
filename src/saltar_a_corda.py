@@ -2,8 +2,6 @@ from datetime import date
 
 CALORIAS_POR_SALTO = 0.08
 
-date = date.today().year
-
 def calculo_imc (peso: float, altura_cm: int) -> float:
     
     altura = altura_cm/100
@@ -19,7 +17,7 @@ def classificacao_imc (imc:float) -> str:
         elif imc >= 18.5 and imc < 25:
             return("\n Estás com peso normal.")
         
-        elif imc > 25 and imc <30:
+        elif imc >= 25 and imc <30:
             return("\n Apresentas excesso de peso.")
         
         elif imc >= 30:
