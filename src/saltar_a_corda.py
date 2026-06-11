@@ -79,7 +79,7 @@ def program ():
 
         imc = calculo_imc(peso, altura)
         
-        escolha = input(int(f"\n Bem, {nome}, com os dados fornecidos fui capaz de calcular o teu IMC, queres saber? (s/n): ")).lower()
+        escolha = input(f"\n Bem, {nome}, com os dados fornecidos fui capaz de calcular o teu IMC, queres saber? (s/n): ").lower()
         
         if escolha not in ["s", "sim"]:
             print("\n OK!"),
@@ -129,7 +129,7 @@ def program ():
             print("\nOpção inválida.")
 
 
-if __name__ == "__program__":
+if __name__ == "__main__":
     program()                
         
     
