@@ -65,33 +65,36 @@ def mostrar_estatisticas(sessoes: list):
     print(f"Total de calorias gastas: {total_calorias:.2f} kcal")
     print(f"Perda de peso estimada: {perda_peso:.2f} kg")
 
-def program ():
-    
-    sessoes = [] 
-    
-    while True:
-        
-        nome=input(str("\nOlá, eu sou a tua App dos Saltos! Como te chamas? "))
-        peso=float(input(f"\n {nome}, diz-me o teu peso: "))
-        altura=int(input("\n Obrigado! E agora a tua altura, em centímetros: "))
+def program():
 
-        imc = calculo_imc(peso, altura)
-        
-        escolha = input(f"\n Bem, {nome}, com os dados fornecidos fui capaz de calcular o teu IMC, queres saber? (s/n): ").lower()
-        
+    sessoes = []
+
+    nome = input(str("\nOlá, eu sou a tua App dos Saltos! Como te chamas? "))
+    peso = float(input(f"\n {nome}, diz-me o teu peso: "))
+    altura = int(input("\n Obrigado! E agora a tua altura, em centímetros: "))
+
+    imc = calculo_imc(peso, altura)
+
+    escolha = input(
+        f"\n Bem, {nome}, com os dados fornecidos fui capaz de calcular o teu IMC, queres saber? (s/n): "
+    ).lower()
+
+    if escolha not in ["s", "sim"]:
+        print("\n OK!")
+
+        escolha = input("\n Vamos começar a trabalhar! (s/n ) ").lower()
+
         if escolha not in ["s", "sim"]:
-            print("\n OK!"),
             
-            escolha = input("\n Vamos começar a trabalhar! (s/n ) ").lower()   
-            if escolha not in ["s", "sim"]:
-                break
-        
-        if escolha in ["s", "sim"]:
-            escolha = input(f"\n {nome}, o teu IMC é de {classificacao_imc(imc)}. \n Vamos melhorar esse valor? (s/n) ").lower()
-                
-            if escolha not in ["s", "sim"]:
-                break
-    
+
+    if escolha in ["s", "sim"]:
+        escolha = input(
+            f"\n {nome}, o teu IMC é de {classificacao_imc(imc)}. \n Vamos melhorar esse valor? (s/n) "
+        ).lower()
+
+        if escolha not in ["s", "sim"]:
+            
+
     while True:
 
         print("\n===== MENU =====")
@@ -125,7 +128,6 @@ def program ():
 
         else:
             print("\nOpção inválida.")
-
 
 if __name__ == "__main__":
     program()                
