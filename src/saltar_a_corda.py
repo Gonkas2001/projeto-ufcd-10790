@@ -46,6 +46,27 @@ def criar_sessao() -> dict:
 
     return sessao       
 
+def mostrar_estatisticas(sessoes: list):
+
+    if len(sessoes) == 0:
+        print("\nAinda não existem sessões registadas.")
+        return
+
+    total_sessoes = len(sessoes)
+
+    total_saltos = sum(sessao["saltos"] for sessao in sessoes)
+
+    total_calorias = sum(sessao["calorias"] for sessao in sessoes)
+
+    perda_peso = total_calorias / 7700
+
+    print("\n===== ESTATÍSTICAS =====")
+
+    print(f"Total de sessões: {total_sessoes}")
+    print(f"Total de saltos: {total_saltos}")
+    print(f"Total de calorias gastas: {total_calorias:.2f} kcal")
+    print(f"Perda de peso estimada: {perda_peso:.2f} kg")
+
 def program ():
     
     while True:
