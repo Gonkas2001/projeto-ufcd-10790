@@ -127,8 +127,8 @@ def program ():
             print("\nOpção inválida.")
 
 
-if __name__ == "__main__":
-    main()                
+if __name__ == "__program__":
+    program()                
         
     
     
