@@ -1,5 +1,7 @@
 from datetime import date 
 
+CALORIAS_POR_SALTO = 0.08
+
 date = date.today().year
 
 def calculo_imc (peso: float, altura_cm: int) -> float:
@@ -48,7 +50,25 @@ def program ():
             if escolha not in ["s", "sim"]:
                 break
         
-        
+ def calcular_calorias(saltos: int) -> float:
+    return saltos * CALORIAS_POR_SALTO
+
+
+def criar_sessao() -> dict:
+
+    saltos = int(input("\nNúmero de saltos realizados: "))
+    duracao = int(input("Duração da sessão (minutos): "))
+
+    calorias = calcular_calorias(saltos)
+
+    sessao = {
+        "data": str(date.today()),
+        "saltos": saltos,
+        "duracao": duracao,
+        "calorias": calorias
+    }
+
+    return sessao       
             
         
     
