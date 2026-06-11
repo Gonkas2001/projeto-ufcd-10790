@@ -85,7 +85,7 @@ def program():
         escolha = input("\n Vamos começar a trabalhar! (s/n ) ").lower()
 
         if escolha not in ["s", "sim"]:
-            
+            return
 
     if escolha in ["s", "sim"]:
         escolha = input(
@@ -93,7 +93,7 @@ def program():
         ).lower()
 
         if escolha not in ["s", "sim"]:
-            
+            return
 
     while True:
 
