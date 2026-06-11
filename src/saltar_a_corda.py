@@ -69,6 +69,8 @@ def mostrar_estatisticas(sessoes: list):
 
 def program ():
     
+    sessoes = [] 
+    
     while True:
         
         nome=input(str("\nOlá, eu sou a tua App dos Saltos! Como te chamas? "))
