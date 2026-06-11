@@ -50,7 +50,7 @@ def program ():
             if escolha not in ["s", "sim"]:
                 break
         
- def calcular_calorias(saltos: int) -> float:
+def calcular_calorias(saltos: int) -> float:
     return saltos * CALORIAS_POR_SALTO
 
 
