@@ -12,13 +12,13 @@ def calculo_imc (peso: float, altura_cm: int) -> float:
 def classificacao_imc (imc:float) -> str:
     
         if imc < 18.5:
-            return("\n Estás abaixo do peso normal.")
+            return(f"\n  Estás abaixo do peso normal.")
         
         elif imc >= 18.5 and imc < 25:
-            return("\n Estás com peso normal.")
+            return(f"\n  Estás com peso normal.")
         
         elif imc >= 25 and imc <30:
-            return("\n Apresentas excesso de peso.")
+            return("\n  Apresentas excesso de peso.")
         
         elif imc >= 30:
             return("\n Apresentas obesidade. Vamos trabalhar!")
@@ -89,7 +89,7 @@ def program():
 
     if escolha in ["s", "sim"]:
         escolha = input(
-            f"\n {nome}, o teu IMC é de {classificacao_imc(imc)}. \n Vamos melhorar esse valor? (s/n) "
+            f"\n {nome}, o teu IMC é de {imc: .2f}. \n Vamos melhorar esse valor? (s/n) "
         ).lower()
 
         if escolha not in ["s", "sim"]:
